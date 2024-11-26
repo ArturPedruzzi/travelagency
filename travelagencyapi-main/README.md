@@ -18,7 +18,7 @@
 
 - **Método:** `GET`  
 - **URL:** `/api/destinos`  
-- **Vai ser retornado os destinos em JSON:**
+- **Resposta (JSON):**
 
   ```json
   [
@@ -47,7 +47,7 @@
 - **URL para buscar destinos pelo nome:** `/api/destinos/pesquisar?nome=Maresias`
 - **URL para buscar destinos pelo nome:** `/api/destinos/pesquisar?localizacao=São Paulo`
 - **URL para buscar destinos pelo nome e localização:** `/api/destinos/pesquisar?nome=Maresias&localizacao=São Paulo`
-- **Vai ser retornado os destinos em JSON:**
+- **Resposta (JSON):**
 
   ```json
   [
@@ -66,7 +66,7 @@
 
 - **Método:** `GET`  
 - **URL:** `/api/destinos/{id}`
-- **Vai ser retornado o destino em JSON:**
+- **Resposta (JSON):**
 
   ```json
   {
@@ -83,8 +83,8 @@
 
 - **Método:** `GET`  
 - **URL:** `/api/destinos/{id}/avaliar?nota=8`
-- **Apenas notas de 1 a 10.**
-- **Vai ser retornado o destino com a nova média calculada:**
+- **Nota: O valor de nota deve ser entre 1 e 10.**
+- **Resposta (JSON):**
 
   ```json
   {
