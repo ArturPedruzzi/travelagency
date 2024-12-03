@@ -1,11 +1,28 @@
 package com.api.travelagency.model;
 
+import jakarta.persistence.*;
+
+@Entity
+@Table(name = "destinos")
 public class Destino {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @Column(nullable = false)
     private String nome;
+
+    @Column(nullable = false)
     private String localizacao;
+
+    @Column(length = 500)
     private String descricao;
+
+    @Column(name = "avaliacao_media", nullable = false)
     private double avaliacaoMedia = 0.0;
+
+    @Column(name = "quantidade_avaliacoes", nullable = false)
     private int quantidadeAvaliacoes = 0;
 
     public Long getId() {

@@ -1,0 +1,16 @@
+<form th:action="@{/login}" method="post" xmlns:th="http://www.w3.org/1999/xhtml">
+    <div>
+        <label for="username">Usuário:</label>
+        <input type="text" id="username" name="username" required="true"/>
+    </div>
+    <div>
+        <label for="password">Senha:</label>
+        <input type="password" id="password" name="password" required="true"/>
+    </div>
+    <button type="submit">Entrar</button>
+</form>
+
+<!-- Exibe a mensagem de erro se houver -->
+<div th:if="${error}">
+    <p style="color: red;">[[${error}]]</p>
+</div>
